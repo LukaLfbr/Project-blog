@@ -22,9 +22,12 @@ class PostsController extends AbstractController
     {
         $blogPosts = $repository->findAll();
 
+        $user = $this->getUser();
+
         return $this->render('posts/posts.html.twig', [
             'controller_name' => 'PostsController',
             'posts' => $blogPosts,
+            'user' => $user
         ]);
     }
 

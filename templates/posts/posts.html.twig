@@ -10,6 +10,18 @@
 </style>
 
 <div class="example-wrapper">
+
+<div class="manage-user">
+{% if user %}
+    <p>Vous êtes connecté en tant que {{app.user.email}} </p>
+{% else %}
+    <a href=" {{path('app_login')}} ">Login</a>
+{% endif %}
+
+<a href=" {{path('app_register')}} ">Register</a>
+</div>
+
+
     <h1>Bienvenue sur le blog</h1>
 
 <ul class="ul-wrapper">
