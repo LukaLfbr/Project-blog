@@ -1,26 +1,36 @@
+# Dossiers et fichiers à exclure
 
-###> symfony/framework-bundle ###
-/.env
 /.env.local
 /.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
 /vendor/
-###< symfony/framework-bundle ###
+/node_modules/
+/.phpunit.result.cache
+/.php_cs.cache
+/.phpstorm.meta.php
+/.idea/
+/.vscode/
+/.DS_Store
 
-###> phpunit/phpunit ###
-/phpunit.xml
-.phpunit.result.cache
-###< phpunit/phpunit ###
+# Fichiers de configuration Symfony générés
 
-###> symfony/phpunit-bridge ###
-.phpunit.result.cache
-/phpunit.xml
-###< symfony/phpunit-bridge ###
+/.env
+/.env.test
+/.phpunit
+/var/cache/
+/var/log/
+/var/sessions/
+/vendor/
+/.php_cs
 
-###> symfony/asset-mapper ###
-/public/assets/
-/assets/vendor/
-###< symfony/asset-mapper ###
+# Fichiers et dossiers spécifiques à certains environnements
+
+/.env.prod.local
+/.env.test.local
+
+# Dossiers et fichiers de sauvegarde
+
+*.swp
+*.bak
+*.~
