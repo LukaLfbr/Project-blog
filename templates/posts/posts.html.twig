@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostsController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    
+</style>
+
+<div class="example-wrapper">
+    <h1>Bienvenue sur le blog</h1>
+
+<ul class="ul-wrapper">
+
+    {% for post in posts %}
+    <li>
+        <a href=" {{path('see.post', {'id':post.id})}} "> {{post.title}} </a>
+        
+        <a href=" {{path('delete.post', {'id': post.id} )}}">Delete Post</a> 
+        <a href=" {{path('edit.post' , {'id': post.id} )}}">Edit post</a>
+        </li>
+    {% endfor %}
+
+    
+</ul>
+
+<a href=" {{path('add.post' )}} ">Add Post</a>
+<br>
+<a href=" {{path('app_login' )}} ">Login</a>
+
+
+</div>
+{% endblock %}
